@@ -20,6 +20,7 @@ const Home = () => {
             src={require("../../assets/personal-photo.jpg")}
             alt="a selfie of myself"
             borderRadius="100%"
+            data-testid="image"
             fallback={
               <SkeletonCircle
                 h="100%"
@@ -27,6 +28,7 @@ const Home = () => {
                 endColor="dark.black"
                 startColor="dark.purple"
                 fadeDuration={10}
+                data-testid="skeleton"
               />
             }
           />
@@ -61,6 +63,7 @@ const Home = () => {
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
+          textAlign="center"
         >
           <Text size="xl" color="dark.green" padding="2em 0">
             To read more about my experience, click the button.

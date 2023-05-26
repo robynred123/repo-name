@@ -1,3 +1,4 @@
+import React from "react";
 import { extendTheme } from "@chakra-ui/react";
 
 const black = "#03001C";
@@ -5,7 +6,7 @@ const purple = "#301E67";
 const blue = "#5B8FB9";
 const green = "#B6EADA";
 
-const theme: Record<string, any> = extendTheme({
+const theme = extendTheme({
   styles: {
     global: () => ({
       body: {
