@@ -5,7 +5,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "types": ["parcel-bundler", "node", "jest", "@testing-library/jest-dom"],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "typeRoots": ["node_modules/@types", "src/types.d.ts"]
   },
   "exclude": ["node_modules"],

@@ -1,8 +1,14 @@
-import React from "react";
-import { Heading } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
+import projects from "../projects";
+
+const project = projects[0];
 
 const Portfolio = () => {
-  return <Heading color="dark.green">Portfolio Page!</Heading>;
+  return (
+    <>
+      <Flex justifyContent="center">{project.element}</Flex>
+    </>
+  );
 };
 
 export default Portfolio;

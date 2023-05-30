@@ -1,0 +1,29 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.text {
+  display: flex;
+  font-size: clamp(3rem, 20vmin, 10rem);
+  animation: move-bg 10s infinite linear;
+  color: transparent;
+  width: 100%;
+  justify-content: center;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: 400% 0;
+  }
+}
+
+.colour-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
