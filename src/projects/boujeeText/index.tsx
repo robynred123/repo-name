@@ -60,6 +60,16 @@ const BoujeeText = () => {
           />
         </div>
       </div>
+      <article>
+        This was created using a tutorial published by Jhey Thompkins, it uses
+        Zustand to manage the colours selected, meaning that if you navigate to
+        another project or page on this website, the colours you select should
+        remain.
+        <br />I created this as part of a state-management application, which I
+        used to help teach my junior mentee about what state management is, and
+        some of the popular state-management frameworks they might encounter,
+        including Zustand, Redux, Mob-x, and react-hooks.
+      </article>
     </div>
   );
 };

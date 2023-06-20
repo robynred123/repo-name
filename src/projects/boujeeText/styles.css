@@ -24,6 +24,35 @@
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   color: white;
+}
+
+article {
+  color: #b6eada;
+  padding: 4em;
+}
+
+@media screen and (max-width: 850px) {
+  .colour-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .colour-input {
+    padding-bottom: 1em;
+  }
+  .text {
+    text-align: center;
+  }
+}
+
+.card {
+  transition: all ease 200ms;
+  width: 25em;
+}
+
+.card:hover {
+  box-shadow: 0 13px 40px 20px rgba(107, 255, 193, 0.299),
+    0 8px 32px 10px rgba(107, 255, 193, 0.264),
+    0 -6px 32px -6px rgba(107, 255, 193, 0.02);
 }

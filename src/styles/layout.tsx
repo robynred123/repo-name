@@ -15,7 +15,7 @@ const Layout = () => {
         alignContent="center"
         padding="1em 1.5em"
         color="dark.green"
-        boxShadow="0 0.3em rgba(182, 234, 218, 0.1), inset 0 -0.3em rgba(182, 234, 218, 0.5), inset 0 -0.4em rgba(182, 234, 218, 0.7)"
+        boxShadow="0 0.3em rgba(107, 255, 193, 0.1), inset 0 -0.3em rgba(107, 255, 193, 0.5), inset 0 -0.4em rgba(107, 255, 193, 0.7)"
       >
         <Flex>
           <Heading size="lg" onClick={() => navigate("/")}>
@@ -26,7 +26,7 @@ const Layout = () => {
         <Flex>
           <IconButton
             bg="none"
-            _hover={{ bg: "none" }}
+            _hover={{ bg: "none", color: "dark.purple" }}
             icon={<StarIcon color="dark.green" h="100%" w="100%" />}
             aria-label="portfolio page link"
             onClick={() => navigate("/portfolio")}

@@ -79,7 +79,7 @@ const Home = () => {
             _hover={{ bg: "dark.purple", color: "dark.green" }}
             _focus={{
               boxShadow:
-                "0 0 1px 2px rgba(182, 234, 218, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+                "0 0 1px 2px rgba(107, 255, 193, .75), 0 1px 1px rgba(0, 0, 0, .15)",
               color: "dark.green",
               bg: "dark.purple",
             }}

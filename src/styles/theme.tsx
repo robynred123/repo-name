@@ -4,7 +4,7 @@ import { extendTheme } from "@chakra-ui/react";
 const black = "#03001C";
 const purple = "#301E67";
 const blue = "#5B8FB9";
-const green = "#B6EADA";
+const green = "#6bffc1"; //"#B6EADA";
 
 const theme = extendTheme({
   styles: {
