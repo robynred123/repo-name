@@ -7,7 +7,7 @@ import {
 import { Flex, Heading, IconButton, Spacer } from "@chakra-ui/react";
 import { Outlet, useNavigate } from "react-router-dom";
 
-const title = "<RB />";
+const title = "<RP />";
 
 const Layout = () => {
   const navigate = useNavigate();
