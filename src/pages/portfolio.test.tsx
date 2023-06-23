@@ -25,8 +25,9 @@ describe("<Portfolio />", () => {
       </BrowserRouter>
     );
 
-    const heading = screen.getByRole("heading");
-    expect(heading).toHaveTextContent("A Test Project");
+    const headings = screen.getAllByRole("heading");
+    expect(headings[0]).toHaveTextContent("Portfolio");
+    expect(headings[1]).toHaveTextContent("A Test Project");
   });
 
   it("should navigate to the correct project on click of card", () => {

@@ -57,4 +57,22 @@ describe("<Layout />", () => {
       )
     );
   });
+
+  it("should navigate to github on clicking the github icon", () => {
+    global.open = jest.fn();
+
+    render(
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    );
+
+    const button = screen.getAllByRole("button")[1];
+
+    expect(button).toBeInTheDocument();
+    fireEvent(button, new MouseEvent("click"));
+    waitFor(() =>
+      expect(global.open).toHaveBeenCalledWith("https://github.com/robynred123")
+    );
+  });
 });

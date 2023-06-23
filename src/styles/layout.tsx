@@ -1,4 +1,9 @@
-import { FaFolderOpen, FaLinkedin } from "react-icons/fa";
+import {
+  FaFolderOpen,
+  FaGithub,
+  FaGithubSquare,
+  FaLinkedin,
+} from "react-icons/fa";
 import { Flex, Heading, IconButton, Spacer } from "@chakra-ui/react";
 import { Outlet, useNavigate } from "react-router-dom";
 
@@ -42,6 +47,14 @@ const Layout = () => {
             icon={<FaLinkedin color="dark.green" size="3em" />}
             aria-label="portfolio page link"
             onClick={() => window.open("https://www.linkedin.com/in/rob-pines")}
+          />
+          <IconButton
+            bg="none"
+            _hover={{ bg: "none", color: "dark.purple" }}
+            margin="0 10px"
+            icon={<FaGithubSquare color="dark.green" size="3em" />}
+            aria-label="portfolio page link"
+            onClick={() => window.open("https://github.com/robynred123")}
           />
         </Flex>
       </Flex>
