@@ -1,4 +1,3 @@
-import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Layout from "./layout";
@@ -23,19 +22,39 @@ describe("<Layout />", () => {
     expect(heading).toHaveTextContent("<RB />");
   });
 
-  it("should navigate to the portfolio page on clicking the star icon", () => {
+  it("should navigate to the portfolio page on clicking the portfolio icon", () => {
     render(
       <BrowserRouter>
         <Layout />
       </BrowserRouter>
     );
 
-    const button = screen.getByRole("button");
+    const button = screen.getAllByRole("button")[0];
 
     expect(button).toBeInTheDocument();
     fireEvent(button, new MouseEvent("click"));
     waitFor(() =>
       expect(mockedUsedNavigate).toHaveBeenCalledWith("/portfolio")
+    );
+  });
+
+  it("should navigate to linkedin on clicking the linkedin icon", () => {
+    global.open = jest.fn();
+
+    render(
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    );
+
+    const button = screen.getAllByRole("button")[1];
+
+    expect(button).toBeInTheDocument();
+    fireEvent(button, new MouseEvent("click"));
+    waitFor(() =>
+      expect(global.open).toHaveBeenCalledWith(
+        "https://www.linkedin.com/in/rob-pines"
+      )
     );
   });
 });

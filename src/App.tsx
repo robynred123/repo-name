@@ -4,6 +4,7 @@ import Layout from "./styles/layout";
 import theme from "./styles/theme";
 import Home from "./pages/index";
 import Portfolio from "./pages/portfolio";
+import ProjectRoute from "./projects/projectRoute";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/portfolio/:projectId" element={<ProjectRoute />} />
             </Route>
           </Routes>
         </BrowserRouter>

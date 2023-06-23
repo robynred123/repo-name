@@ -1,6 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Portfolio from "./portfolio";
+import { BrowserRouter } from "react-router-dom";
+const mockedUsedNavigate = jest.fn();
+
+jest.mock("react-router-dom", () => ({
+  ...(jest.requireActual("react-router-dom") as any),
+  useNavigate: () => mockedUsedNavigate,
+}));
 
 jest.mock("../projects/index.tsx", () => [
   {
@@ -12,9 +19,28 @@ jest.mock("../projects/index.tsx", () => [
 
 describe("<Portfolio />", () => {
   it("should render the page as expected", () => {
-    render(<Portfolio />);
+    render(
+      <BrowserRouter>
+        <Portfolio />
+      </BrowserRouter>
+    );
 
     const heading = screen.getByRole("heading");
     expect(heading).toHaveTextContent("A Test Project");
+  });
+
+  it("should navigate to the correct project on click of card", () => {
+    render(
+      <BrowserRouter>
+        <Portfolio />
+      </BrowserRouter>
+    );
+
+    const card = screen.getByTestId("card");
+    fireEvent(card, new MouseEvent("click"));
+    waitFor(() => {
+      expect(mockedUsedNavigate).toHaveBeenCalledTimes(1);
+      expect(mockedUsedNavigate).toHaveBeenCalledWith("/portfolio/0");
+    });
   });
 });
