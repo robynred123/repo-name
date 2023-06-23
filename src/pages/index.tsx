@@ -13,7 +13,12 @@ import {
 const Home = () => {
   return (
     <Flex width="100%" padding="2em 15%" flexDirection="column">
-      <Flex width="100%" direction={{ base: "column", lg: "row" }}>
+      <Flex
+        width="80%"
+        alignSelf="center"
+        direction={{ base: "column", lg: "row" }}
+        justifyContent="space-around"
+      >
         <Container alignItems="center" display="flex" maxH="430px" maxW="430px">
           <Image
             src={require("../../assets/personal-photo.jpg")}
@@ -53,7 +58,7 @@ const Home = () => {
         </Container>
       </Flex>
       <Spacer />
-      <Flex padding="2em" justifyContent="center">
+      <Flex padding="2em" justifyContent="center" alignSelf="center">
         <Card
           bg="dark.black"
           padding="2em"
